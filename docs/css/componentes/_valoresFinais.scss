@@ -1,0 +1,46 @@
+.valoresFinais {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+
+    .conteudo_valoresFinais {
+        align-items: center;
+        background-color: $background_rosa_claro;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        padding: 55px 0;
+
+        h1 {
+         @include fonte_peso_branco_32px;
+        }
+
+       h2 {
+        @include fonte_peso_branco_24px;
+       }
+
+       h1, h2 {
+        margin-bottom: 8px;
+       }
+
+       span {
+        @include fonte_peso_branco_20px;
+       }
+
+       .mes_anterior, .saldo, .previsto {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       }
+
+       .saldo {
+        margin: 0 50px;
+
+        span {
+            @include fonte_peso_branco_24px;
+        }
+       }
+    }
+}

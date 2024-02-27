@@ -1,0 +1,42 @@
+@import './formatações/fontes';
+@import './formatações/formatacoes';
+
+header {
+    align-items: center;
+    background-color: $background_rosa_claro;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    width: 100%;
+
+    div {
+        align-items: center;
+        display: flex;
+        margin: 0 16px 0 16px;
+
+        .icone_pagina {
+            background-image: url('/docs/imagens/logo.png');
+            background-image: url('../../imagens/logo.png');
+            background-image: url('../../dist/imagens/logo.png');
+            height: 40px;
+            width: 71px;
+        }
+
+        p {
+            @include fonte_peso_rosa_24px;
+            
+            span {
+                @include fonte_peso_branco_24px;
+            }
+        }
+    }
+
+    div {
+        .icone_info {
+            background-image: url('../../dist/imagens/icones/global/icone_info.svg');
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+}

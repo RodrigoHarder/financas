@@ -1,0 +1,18 @@
+@import './componentes/cabecalho';
+@import './componentes/valoresFinais';
+@import './componentes/conteudoPrincipal';
+
+
+body {
+    background-color: $background_pagina;
+    font-family: Arial;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $cor_rosa;
+    border-radius: 8px;
+}

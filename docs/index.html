@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="icone_pagina"></div>
+            <p>Minhas<span>Finanças</span>.com</p>
+        </div>
+
+        <div>
+            <i class="icone_info"></i>
+        </div>
+    </header>
+
+    <section class="valoresFinais">
+        <div class="conteudo_valoresFinais">
+            <div class="mes_anterior">
+                <h2>Saldo anterior</h2>
+                <span id="saldo_meses-anteriores">R$ 0.00</span>
+            </div>
+            <div class="saldo">
+                <h1>Saldo</h1>
+                <span id="saldo_mes-atual">R$ 0.00</span>
+            </div>
+            <div class="previsto">
+                <h2>Saldo previsto</h2>
+                <span id="saldo_mes-previsto">R$ 0.00</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="conteudoPrincipal">
+
+        <!--1-->
+        <div class="card_conta">
+            <h2>
+                Conta
+            </h2>
+
+            <div>
+                <div class="info_conta">
+                    <div>
+                        <div class="fundoIcones">
+                            <i class="icone_conta"></i>
+                        </div>
+                        <p>Minha conta</p>
+                    </div>
+                    <div class="valor">
+                        <p>R$</p>
+                        <span id="valor_conta">0,00</span>
+                    </div>
+                </div>
+
+                <div class="info_conta">
+                    <div>
+                        <div class="fundoIcones">
+                            <i class="icone_carteira"></i>
+                        </div>
+                        <p>Minha carteira</p>
+                    </div>
+                    <div class="valor">
+                        <p>R$</p>
+                        <span id="valor_conta">0,00</span>
+                    </div>
+                </div>
+
+                <div class="info_conta">
+                    <div>
+                        <div class="fundoIcones">
+                            <i class="icone_investido"></i>
+                        </div>
+                        <p>Investido</p>
+                    </div>
+                    <div class="valor">
+                        <p>R$</p>
+                        <span id="valor_conta">0,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--2-->
+        <div class="card_visaoGeral">
+            <h2>
+                Visão Geral
+            </h2>
+
+            <div>
+                <div class="info_visaoGeral">
+                    <div>
+                        <div class="fundoIcones">
+                            <i class="icone_saldo"></i>
+                        </div>
+                        <p>Saldo</p>
+                    </div>
+                    <div class="valor">
+                        <p>R$</p>
+                        <span id="valor_saldo">0,00</span>
+                    </div>
+                </div>
+
+                <div class="info_visaoGeral">
+                    <div>
+                        <div class="fundoIcones">
+                            <i class="icone_despesas"></i>
+                        </div>
+                        <p>Despesas</p>
+                    </div>
+                    <div class="valor">
+                        <p>R$</p>
+                        <span id="valor_despesas">0,00</span>
+                    </div>
+                </div>
+
+                <div class="info_visaoGeral">
+                    <div>
+                        <div class="fundoIcones">
+                            <i class="icone_cartao"></i>
+                        </div>
+                        <p>Despesas do cartão</p>
+                    </div>
+                    <div class="valor">
+                        <p>R$</p>
+                        <span id="valor_credito">0,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--3-->
+        <div class="card_addDinheiro" id="card_addEntrada">
+            <div class="cabecalho_card_addDinheiro">
+                <h2 id="titulo_addDinheiro">Adicionar entrada</h2>
+                <div class="btn_fechar" id="bnt_inicio_card_addDinheiro"></div>
+                <div class="btn_voltar" id="bnt_voltar_pagina_entrada"></div>
+            </div>
+            <button class="fundoIcones_add" id="add_entrada">
+                <i class="icone_add"></i>
+            </button>
+
+            <div class="pre_form_entrada" id="pre_formulario_entrada">
+                <div>
+                    <label class="opcao_banco">
+                        <input class="banco" id="opcao" type="radio" name="opcao_entrada" value="Banco">
+                    </label>
+                    <label class="opcao_carteira">
+                        <input class="carteira" id="opcao" type="radio" name="opcao_entrada" value="Carteira">
+                    </label>
+                    <label class="opcao_investido">
+                        <input class="investido" id="opcao" type="radio" name="opcao_entrada" value="Investido">
+                    </label>
+                </div>
+                <div class="btn_prox_form_desabilitado" id="btn_prox_formulario" type="button"></div>
+
+                <span id="msg_erro_pre_form">Selecione uma das opções para prosseguir</span>
+            </div>
+
+            <div class="form_entrada" id="formulario">
+                <div>
+                    <label>
+                        <input type="text" placeholder="Titulo da entrada" maxlength="10" id="input_titulo">
+                        <button class="btn_apagar" id="btn_apagar_titulo_entrada"></button>
+                    </label>
+                    <span id="msg_erro_titulo_addEntrada">O campo acima aceita apenas letras</span>
+                    <label>
+                        <input type="text" placeholder="Valor da entrada" id="input_valor">
+                        <button class="btn_apagar" id="btn_apagar_valor_entrada"></button>
+                    </label>
+                    <span id="msg_erro_valor">O campo acima aceita apenas números</span>
+                    <label>
+                        <input type="text" placeholder="Data da entrada" onfocus="this.type='date'"
+                            onblur="if (!this.value) this.type='text'" id="input_data">
+                        <button class="btn_apagar" id="btn_apagar_data_entrada"></button>
+                    </label>
+                    <span id="msg_erro_data_addDinheiro">A data que você digitou não é válida</span>
+                    <div class="btn_enviar_entrada" id="btn_enviar_formulario_entrada"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--4-->
+        <div class="card_objetivos">
+            <div class="cabecalho_card_objetivos">
+                <h2>Objetivos</h2>
+            </div>
+            <button class="fundoIcones_add" id="add_dinheiro">
+                <i class="icone_add"></i>
+            </button>
+        </div>
+
+        <!--5-->
+        <div class="card_economias">
+            <div class="economia_mes">
+                <h2>Economia do mês</h2>
+                <div>
+                    <span>R$</span>
+                    <span id="valor_economia_mes">0,00</span>
+                </div>
+            </div>
+            <div class="valores_considerados">
+                <div class="receitas">
+                    <p>Receitas consideradas</p>
+                    <div>
+                        <span>R$</span>
+                        <span>0,00</span>
+                    </div>
+                </div>
+                <div class="despesas">
+                    <p>Despesas consideradas</p>
+                    <div>
+                        <span>R$</span>
+                        <span>0,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--6-->
+        <div class="card_addDespesas" id="card_addDespesa">
+            <div class="cabecalho_card_addDespesas">
+                <h2 id="titulo_addDespesa">Adicionar despesas</h2>
+                <div class="btn_fechar" id="bnt_inicio_card_addDespesa"></div>
+                <div class="btn_voltar" id="bnt_voltar_pagina_despesa"></div>
+            </div>
+            <button class="fundoIcones_add" id="add_despesas">
+                <i class="icone_add"></i>
+            </button>
+
+            <div class="pre_form_despesa" id="pre_formulario_despesa">
+                <div>
+                    <label class="opcao_compras">
+                        <input class="banco" id="opcao" type="radio" name="opcao_despesa" value="Contas">
+                    </label>
+                    <label class="opcao_cartao">
+                        <input class="carteira" id="opcao" type="radio" name="opcao_despesa" value="Cartão">
+                    </label>
+                    <label class="opcao_contas">
+                        <input class="investido" id="opcao" type="radio" name="opcao_despesa" value="Compras">
+                    </label>
+                </div>
+                <div class="btn_prox_form_desabilitado" id="btn_prox_formulario" type="button"></div>
+
+                <span id="msg_erro_pre_form">Selecione uma das opções para prosseguir</span>
+            </div>
+
+            <div class="form_despesa" id="formulario">
+                <div>
+                    <label>
+                        <input type="text" placeholder="Titulo da despesa" maxlength="10" id="input_titulo">
+                        <button class="btn_apagar" id="btn_apagar_titulo_entrada"></button>
+                    </label>
+                    <span id="msg_erro_titulo_addEntrada">O campo acima aceita apenas letras</span>
+                    <label>
+                        <input type="text" placeholder="Valor da despesa" id="input_valor">
+                        <button class="btn_apagar" id="btn_apagar_valor_entrada"></button>
+                    </label>
+                    <span id="msg_erro_valor">O campo acima aceita apenas números</span>
+                    <label>
+                        <input type="text" placeholder="Data da despesa" onfocus="this.type='date'"
+                            onblur="if (!this.value) this.type='text'" id="input_data">
+                        <button class="btn_apagar" id="btn_apagar_data_entrada"></button>
+                    </label>
+                    <span id="msg_erro_data_addDinheiro">A data que você digitou não é válida</span>
+                    <div class="btn_enviar_despesa" id="btn_enviar_formulario_despesa"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--7-->
+        <div class="card_entradas" id="card_entradas">
+            <div class="cabecalho_card_entradas">
+                <h2>Entradas</h2>
+                <div>
+                    <span id="filtrar_entrada">Filtrar</span>
+                    <i class="icone_editar" id="icone_editarEntrada"></i>
+                </div>
+            </div>
+
+            <div class="filtros_card_entradas">
+                <div>
+                    <h2>Filtros</h2>
+    
+                    <ul>
+                        <li id="filtro_data_entradas">Data<i id="icone_data_entradas"></i></li>
+                        <li>Banco</li>
+                        <li>Carteira</li>
+                        <li>Investido</li>
+                    </ul>
+                </div>
+
+                <i class="iconeFechar" id="icone_fecharFiltros_entrada"></i>
+            </div>
+
+            <div class="entradas_osuario">
+                <div class="dados_entradas">
+                    <!-- <div class="dados_entradas_container">
+                        <div class="descricao_entradas">
+                            <li class="dados_entrada_usuario">
+                                <span id="nome_entrada"></span>
+                                <span id="destino_entrada"></span>
+                                <span id="data_entrada"></span>
+                            </li>
+                        </div>
+                        <div class="valor_entrada">
+                            <span id="valor_entrada"></span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <!--8-->
+        <div class="card_imagem">
+        </div>
+
+        <!--9-->
+        <div class="card_despesas" id="card_despesas">
+            <div class="cabecalho_card_despesas">
+                <h2>Despesas</h2>
+                <i class="icone_editar" id="icone_editarDespesa"></i>
+            </div>
+
+            <div class="despesas_osuario">
+                <div class="dados_despesas">
+                    <div class="dados_despesas_container">
+                        <div class="descricao_despesas">
+                            <li class="dados_despesa_usuario">
+                                <span id="nome_despesa"></span>
+                                <span id="destino_despesa"></span>
+                                <span id="data_despesa"></span>
+                            </li>
+                        </div>
+                        <div class="valor_despesa">
+                            <span id="valor_despesa"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

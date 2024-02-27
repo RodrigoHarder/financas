@@ -1,0 +1,1168 @@
+@charset "UTF-8";
+header {
+  align-items: center;
+  background-color: #FFDFDF;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  width: 100%;
+}
+header div {
+  align-items: center;
+  display: flex;
+  margin: 0 16px 0 16px;
+}
+header div .icone_pagina {
+  background-image: url("../../dist/imagens/logo.png");
+  height: 40px;
+  width: 71px;
+}
+header div p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #F875AA;
+}
+header div p span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+header div .icone_info {
+  background-image: url("../../dist/imagens/icones/global/icone_info.svg");
+  height: 24px;
+  width: 24px;
+}
+
+.valoresFinais {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+.valoresFinais .conteudo_valoresFinais {
+  align-items: center;
+  background-color: #FFDFDF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  padding: 55px 0;
+}
+.valoresFinais .conteudo_valoresFinais h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.valoresFinais .conteudo_valoresFinais h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.valoresFinais .conteudo_valoresFinais h1, .valoresFinais .conteudo_valoresFinais h2 {
+  margin-bottom: 8px;
+}
+.valoresFinais .conteudo_valoresFinais span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.valoresFinais .conteudo_valoresFinais .mes_anterior, .valoresFinais .conteudo_valoresFinais .saldo, .valoresFinais .conteudo_valoresFinais .previsto {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.valoresFinais .conteudo_valoresFinais .saldo {
+  margin: 0 50px;
+}
+.valoresFinais .conteudo_valoresFinais .saldo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.conteudoPrincipal {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4, 382px);
+  margin: 24px 48px;
+}
+.conteudoPrincipal .card_conta {
+  grid-area: 1/1/2/2;
+}
+.conteudoPrincipal .card_visaoGeral {
+  grid-area: 1/2/2/3;
+}
+.conteudoPrincipal .card_addDinheiro {
+  grid-area: 1/3/2/4;
+}
+.conteudoPrincipal .card_objetivos {
+  grid-area: 1/4/5/5;
+}
+.conteudoPrincipal .card_economias {
+  grid-area: 2/1/3/3;
+}
+.conteudoPrincipal .card_addDespesas {
+  grid-area: 2/3/3/4;
+}
+.conteudoPrincipal .card_entradas {
+  grid-area: 3/1/4/3;
+}
+.conteudoPrincipal .card_imagem {
+  grid-area: 3/3/5/4;
+}
+.conteudoPrincipal .card_despesas {
+  grid-area: 4/1/5/3;
+}
+.conteudoPrincipal .card_conta {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 200px;
+  max-width: 382px;
+  width: 382px;
+}
+.conteudoPrincipal .card_conta h2 {
+  font-size: 1.5rem;
+  color: #000000;
+  padding: 16px;
+}
+.conteudoPrincipal .card_conta div .info_conta {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+.conteudoPrincipal .card_conta div .info_conta div {
+  align-items: center;
+  display: flex;
+}
+.conteudoPrincipal .card_conta div .info_conta div .fundoIcones {
+  align-items: center;
+  background-color: #FFDFDF;
+  border-radius: 25px;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+  margin-right: 8px;
+}
+.conteudoPrincipal .card_conta div .info_conta div p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  margin-right: 16px;
+}
+.conteudoPrincipal .card_conta div .info_conta .valor {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  display: flex;
+}
+.conteudoPrincipal .card_conta div .info_conta .valor p {
+  margin-right: 4px;
+}
+.conteudoPrincipal .card_conta div .info_conta .icone_conta {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 24px;
+  width: 24px;
+  background-image: url("../../dist/imagens/icones/conta/icone_banco.svg");
+}
+.conteudoPrincipal .card_conta div .info_conta .icone_carteira {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 24px;
+  width: 24px;
+  background-image: url("../../dist/imagens/icones/conta/icone_carteira.svg");
+}
+.conteudoPrincipal .card_conta div .info_conta .icone_investido {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 24px;
+  width: 24px;
+  background-image: url("../../dist/imagens/icones/conta/icone_porquinho.svg");
+}
+.conteudoPrincipal .card_visaoGeral {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 200px;
+  margin-right: 24px;
+  max-height: 382px;
+  width: 382px;
+}
+.conteudoPrincipal .card_visaoGeral h2 {
+  font-size: 1.5rem;
+  color: #000000;
+  padding: 16px;
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral div {
+  align-items: center;
+  display: flex;
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral div .fundoIcones {
+  align-items: center;
+  background-color: #FFDFDF;
+  border-radius: 25px;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+  margin-right: 8px;
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral div p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  margin-right: 16px;
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral .valor {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  display: flex;
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral .valor p {
+  margin-right: 4px;
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral .icone_saldo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 24px;
+  width: 24px;
+  background-image: url("../../dist/imagens/icones/visao geral/icone_seta.svg");
+  background-size: 70%;
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral .icone_despesas {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 24px;
+  width: 24px;
+  background-image: url("../../dist/imagens/icones/visao geral/icone_seta.svg");
+  background-size: 70%;
+  transform: rotate(180deg);
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral .icone_cartao {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 24px;
+  width: 24px;
+  background-image: url("../../dist/imagens/icones/visao geral/icone_cartao.svg");
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral:nth-child(1) .fundoIcones {
+  background-color: #04BA00;
+  /* Este será vermelho */
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral:nth-child(2) .fundoIcones {
+  background-color: #C80000;
+  /* Este será vermelho */
+}
+.conteudoPrincipal .card_visaoGeral div .info_visaoGeral:nth-child(3) .fundoIcones {
+  background-color: #AEDEFC;
+  /* Este será vermelho */
+}
+.conteudoPrincipal .card_addDinheiro {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 382px;
+  overflow: hidden;
+  position: relative;
+  width: 382px;
+  height: 200px;
+}
+.conteudoPrincipal .card_addDinheiro .cabecalho_card_addDinheiro {
+  align-items: center;
+  background-color: #FFDFDF;
+  display: flex;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.conteudoPrincipal .card_addDinheiro .cabecalho_card_addDinheiro h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-left: 8px;
+}
+.conteudoPrincipal .card_addDinheiro .cabecalho_card_addDinheiro .btn_fechar {
+  background-image: url("../../dist/imagens/icones/global/icone_mais.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  display: none;
+  height: 24px;
+  position: absolute;
+  right: 16px;
+  rotate: 45deg;
+  width: 24px;
+}
+.conteudoPrincipal .card_addDinheiro .cabecalho_card_addDinheiro .btn_voltar {
+  background-image: url("../../dist/imagens/icones/global/icone_voltar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  display: none;
+  height: 18px;
+  position: absolute;
+  left: 16px;
+  width: 18px;
+}
+.conteudoPrincipal .card_addDinheiro .fundoIcones_add {
+  background-color: #FFDFDF;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 42px;
+  margin-top: 32px;
+  width: 42px;
+}
+.conteudoPrincipal .card_addDinheiro .fundoIcones_add .icone_add {
+  background-image: url("../../dist/imagens/icones/global/icone_mais.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  height: 24px;
+  margin: 0 auto;
+  width: 24px;
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  margin-top: 16px;
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div {
+  display: flex;
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div label {
+  background-color: #FFDFDF;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 70px;
+  margin: 16px;
+  transition: all 0.2s;
+  width: 70px;
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div label input {
+  visibility: hidden;
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div label:hover {
+  transform: scale(1.1);
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div .opcao_banco {
+  background-position: center 5px;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  position: relative;
+  background-image: url("../../dist/imagens/icones/conta/icone_banco.svg");
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div .opcao_banco::after {
+  bottom: 0;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 6px;
+  position: absolute;
+  content: "Banco";
+  right: 15px;
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div .opcao_carteira {
+  background-position: center 5px;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  position: relative;
+  background-image: url("../../dist/imagens/icones/conta/icone_carteira.svg");
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div .opcao_carteira::after {
+  bottom: 0;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 6px;
+  position: absolute;
+  content: "Carteira";
+  right: 9px;
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div .opcao_investido {
+  background-position: center 5px;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  position: relative;
+  background-image: url("../../dist/imagens/icones/conta/icone_porquinho.svg");
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div .opcao_investido::after {
+  bottom: 0;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 6px;
+  position: absolute;
+  content: "Investido";
+  right: 4px;
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada div label:has(input:checked) {
+  box-shadow: 2.5px 2.5px #ffc7c7;
+  transform: scale(1.1);
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada .btn_prox_form_desabilitado {
+  background-color: #E7E7E7;
+  background-image: url("../../dist/imagens/icones/global/icone_proximo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-radius: 25px;
+  cursor: no-drop;
+  height: 40px;
+  transition: all 0.2s;
+  width: 200px;
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada .btn_prox_form {
+  background-color: #FFDFDF;
+  background-image: url("../../dist/imagens/icones/global/icone_proximo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 40px;
+  transition: all 0.2s;
+  width: 200px;
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada .btn_prox_form:hover {
+  box-shadow: 2.5px 2.5px #ffc7c7;
+  transform: scale(1.1);
+}
+.conteudoPrincipal .card_addDinheiro .pre_form_entrada span {
+  display: none;
+  margin: 4px auto;
+  color: #ff0000;
+  font-size: 12px;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada {
+  display: none;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div label {
+  align-items: center;
+  display: flex;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div label input {
+  background-color: #FFDFDF;
+  border-radius: 10px;
+  color: #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  height: 32px;
+  margin: 4px;
+  padding: 0 8px;
+  transition: all 0.2s;
+  width: 240px;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div label input:focus {
+  box-shadow: 1px 1px #ffc7c7;
+  outline: none;
+  transform: scale(1.05);
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div label input:hover {
+  transform: scale(1.05);
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div label button {
+  background-color: #FFDFDF;
+  background-image: url("../../dist/imagens/icones/global/icone_lixeira.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  border-radius: 16px;
+  cursor: pointer;
+  height: 28px;
+  margin-left: 8px;
+  width: 28px;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div label .btn_apagar {
+  display: none;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div label .btn_apagar:hover {
+  transform: scale(1.1);
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div label ::-webkit-calendar-picker-indicator {
+  background-color: transparent;
+  background-image: url("../../dist/imagens/icones/global/icone_calendario.svg");
+  background-size: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 16px;
+  padding: 5px;
+  width: 16px;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div label ::-moz-placeholder {
+  color: #ffffff;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div label ::placeholder {
+  color: #ffffff;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div span {
+  display: none;
+  margin: 4px auto;
+  color: #ff0000;
+  font-size: 12px;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div .btn_enviar_entrada {
+  background-color: #FFDFDF;
+  background-image: url("../../dist/imagens/icones/global/icone_mais.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+  height: 32px;
+  margin: 4px;
+  padding: 0 8px;
+  transition: all 0.2s;
+  width: 256px;
+}
+.conteudoPrincipal .card_addDinheiro .form_entrada div .btn_enviar_entrada:hover {
+  transform: scale(1.05);
+}
+.conteudoPrincipal .card_objetivos {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 382px;
+  overflow: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  width: 382px;
+}
+.conteudoPrincipal .card_objetivos .cabecalho_card_objetivos {
+  align-items: center;
+  background-color: #FFDFDF;
+  display: flex;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.conteudoPrincipal .card_objetivos .cabecalho_card_objetivos h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-left: 8px;
+}
+.conteudoPrincipal .card_objetivos .fundoIcones_add {
+  background-color: #FFDFDF;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 42px;
+  margin-top: 32px;
+  width: 42px;
+}
+.conteudoPrincipal .card_objetivos .fundoIcones_add .icone_add {
+  background-image: url("../../dist/imagens/icones/global/icone_mais.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  height: 24px;
+  margin: 0 auto;
+  width: 24px;
+}
+.conteudoPrincipal .card_economias {
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  height: 200px;
+  justify-content: space-between;
+}
+.conteudoPrincipal .card_economias .economia_mes {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 48px;
+}
+.conteudoPrincipal .card_economias .economia_mes h2 {
+  font-size: 1.5rem;
+  color: #000000;
+}
+.conteudoPrincipal .card_economias .economia_mes div {
+  margin-top: 40px;
+}
+.conteudoPrincipal .card_economias .economia_mes div span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #D1D1D1;
+}
+.conteudoPrincipal .card_economias .valores_considerados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 48px;
+}
+.conteudoPrincipal .card_economias .valores_considerados .receitas {
+  display: flex;
+  flex-direction: column;
+}
+.conteudoPrincipal .card_economias .valores_considerados .receitas p {
+  font-size: 1rem;
+  color: #000000;
+  padding-bottom: 8px;
+}
+.conteudoPrincipal .card_economias .valores_considerados .receitas div {
+  margin-bottom: 16px;
+}
+.conteudoPrincipal .card_economias .valores_considerados .receitas div span {
+  font-size: 1rem;
+  color: #D1D1D1;
+}
+.conteudoPrincipal .card_economias .valores_considerados .despesas {
+  display: flex;
+  flex-direction: column;
+}
+.conteudoPrincipal .card_economias .valores_considerados .despesas p {
+  font-size: 1rem;
+  color: #000000;
+  padding-bottom: 8px;
+}
+.conteudoPrincipal .card_economias .valores_considerados .despesas div span {
+  font-size: 1rem;
+  color: #D1D1D1;
+}
+.conteudoPrincipal .card_addDespesas {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 382px;
+  overflow: hidden;
+  position: relative;
+  width: 382px;
+  height: 200px;
+}
+.conteudoPrincipal .card_addDespesas .cabecalho_card_addDespesas {
+  align-items: center;
+  background-color: #FFDFDF;
+  display: flex;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.conteudoPrincipal .card_addDespesas .cabecalho_card_addDespesas h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-left: 8px;
+}
+.conteudoPrincipal .card_addDespesas .cabecalho_card_addDespesas .btn_fechar {
+  background-image: url("../../dist/imagens/icones/global/icone_mais.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  display: none;
+  height: 24px;
+  position: absolute;
+  right: 16px;
+  rotate: 45deg;
+  width: 24px;
+}
+.conteudoPrincipal .card_addDespesas .cabecalho_card_addDespesas .btn_voltar {
+  background-image: url("../../dist/imagens/icones/global/icone_voltar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  display: none;
+  height: 18px;
+  position: absolute;
+  left: 16px;
+  width: 18px;
+}
+.conteudoPrincipal .card_addDespesas .fundoIcones_add {
+  background-color: #FFDFDF;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 42px;
+  margin-top: 32px;
+  width: 42px;
+}
+.conteudoPrincipal .card_addDespesas .fundoIcones_add .icone_add {
+  background-image: url("../../dist/imagens/icones/global/icone_mais.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  height: 24px;
+  margin: 0 auto;
+  width: 24px;
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  margin-top: 16px;
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div {
+  display: flex;
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div label {
+  background-color: #FFDFDF;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 70px;
+  margin: 16px;
+  transition: all 0.2s;
+  width: 70px;
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div label input {
+  visibility: hidden;
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div label:hover {
+  transform: scale(1.1);
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div .opcao_compras {
+  background-position: center 5px;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  position: relative;
+  background-image: url("../../dist/imagens/icones/card despesas/icone_contas.svg");
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div .opcao_compras::after {
+  bottom: 0;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 6px;
+  position: absolute;
+  content: "Contas";
+  right: 13px;
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div .opcao_cartao {
+  background-position: center 5px;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  position: relative;
+  background-image: url("../../dist/imagens/icones/visao geral/icone_cartao.svg");
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div .opcao_cartao::after {
+  bottom: 0;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 6px;
+  position: absolute;
+  content: "Cartão";
+  right: 13px;
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div .opcao_contas {
+  background-position: center 5px;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  position: relative;
+  background-image: url("../../dist/imagens/icones/card despesas/icone_compras.svg");
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div .opcao_contas::after {
+  bottom: 0;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 6px;
+  position: absolute;
+  content: "Compras";
+  right: 5px;
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa div label:has(input:checked) {
+  box-shadow: 2.5px 2.5px #ffc7c7;
+  transform: scale(1.1);
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa .btn_prox_form_desabilitado {
+  background-color: #E7E7E7;
+  background-image: url("../../dist/imagens/icones/global/icone_proximo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-radius: 25px;
+  cursor: no-drop;
+  height: 40px;
+  transition: all 0.2s;
+  width: 200px;
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa .btn_prox_form {
+  background-color: #FFDFDF;
+  background-image: url("../../dist/imagens/icones/global/icone_proximo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 40px;
+  transition: all 0.2s;
+  width: 200px;
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa .btn_prox_form:hover {
+  box-shadow: 2.5px 2.5px #ffc7c7;
+  transform: scale(1.1);
+}
+.conteudoPrincipal .card_addDespesas .pre_form_despesa span {
+  display: none;
+  margin: 4px auto;
+  color: #ff0000;
+  font-size: 12px;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa {
+  display: none;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div label {
+  align-items: center;
+  display: flex;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div label input {
+  background-color: #FFDFDF;
+  border-radius: 10px;
+  color: #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  height: 32px;
+  margin: 4px;
+  padding: 0 8px;
+  transition: all 0.2s;
+  width: 240px;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div label input:focus {
+  box-shadow: 1px 1px #ffc7c7;
+  outline: none;
+  transform: scale(1.05);
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div label input:hover {
+  transform: scale(1.05);
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div label button {
+  background-color: #FFDFDF;
+  background-image: url("../../dist/imagens/icones/global/icone_lixeira.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  border-radius: 16px;
+  cursor: pointer;
+  height: 28px;
+  margin-left: 8px;
+  width: 28px;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div label .btn_apagar {
+  display: none;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div label .btn_apagar:hover {
+  transform: scale(1.1);
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div label ::-webkit-calendar-picker-indicator {
+  background-color: transparent;
+  background-image: url("../../dist/imagens/icones/global/icone_calendario.svg");
+  background-size: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 16px;
+  padding: 5px;
+  width: 16px;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div label ::-moz-placeholder {
+  color: #ffffff;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div label ::placeholder {
+  color: #ffffff;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div span {
+  display: none;
+  margin: 4px auto;
+  color: #ff0000;
+  font-size: 12px;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div .btn_enviar_despesa {
+  background-color: #FFDFDF;
+  background-image: url("../../dist/imagens/icones/global/icone_mais.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+  height: 32px;
+  margin: 4px;
+  padding: 0 8px;
+  transition: all 0.2s;
+  width: 256px;
+}
+.conteudoPrincipal .card_addDespesas .form_despesa div .btn_enviar_despesa:hover {
+  transform: scale(1.05);
+}
+.conteudoPrincipal .card_entradas {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 200px;
+  overflow: auto;
+}
+.conteudoPrincipal .card_entradas .cabecalho_card_entradas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 16px 20px 16px;
+}
+.conteudoPrincipal .card_entradas .cabecalho_card_entradas h2 {
+  font-size: 1.5rem;
+  color: #000000;
+}
+.conteudoPrincipal .card_entradas .cabecalho_card_entradas div {
+  align-items: center;
+  display: flex;
+}
+.conteudoPrincipal .card_entradas .cabecalho_card_entradas div span {
+  cursor: pointer;
+  font-style: italic;
+  margin-right: 16px;
+}
+.conteudoPrincipal .card_entradas .cabecalho_card_entradas div .icone_editar {
+  background-image: url("../../dist/imagens/icones/global/icone_editar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  display: block;
+  height: 25px;
+  width: 25px;
+}
+.conteudoPrincipal .card_entradas .filtros_card_entradas {
+  background-color: #FFDFDF;
+  border-radius: 10px;
+  display: none;
+  flex-direction: row;
+  margin-bottom: 8px;
+  justify-content: space-between;
+  padding: 20px 16px 20px 16px;
+}
+.conteudoPrincipal .card_entradas .filtros_card_entradas div {
+  display: flex;
+}
+.conteudoPrincipal .card_entradas .filtros_card_entradas div h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-right: 16px;
+}
+.conteudoPrincipal .card_entradas .filtros_card_entradas div ul {
+  align-items: center;
+  display: flex;
+}
+.conteudoPrincipal .card_entradas .filtros_card_entradas div ul li {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0 16px;
+  padding: 3px;
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+.conteudoPrincipal .card_entradas .filtros_card_entradas div ul li i {
+  background-image: url("../../dist/imagens/icones/global/icone_voltar_preto.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 9px;
+  height: 9px;
+  margin-left: 4px;
+}
+.conteudoPrincipal .card_entradas .filtros_card_entradas div ul li:hover {
+  transform: scale(1.15);
+}
+.conteudoPrincipal .card_entradas .filtros_card_entradas div ul .filtro_selecionado {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.15);
+}
+.conteudoPrincipal .card_entradas .filtros_card_entradas .iconeFechar {
+  background-image: url("../../dist/imagens/icones/global/icone_mais.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  height: 24px;
+  rotate: 45deg;
+  width: 24px;
+}
+.conteudoPrincipal .card_entradas .entradas_osuario {
+  display: flex;
+}
+.conteudoPrincipal .card_entradas .entradas_osuario .dados_entradas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 16px 0 16px;
+  width: 100%;
+}
+.conteudoPrincipal .card_entradas .entradas_osuario .dados_entradas .dados_entradas_container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.conteudoPrincipal .card_entradas .entradas_osuario .dados_entradas .dados_entradas_container .dados_entrada_usuario {
+  align-items: center;
+  display: flex;
+}
+.conteudoPrincipal .card_entradas .entradas_osuario .dados_entradas .dados_entradas_container .dados_entrada_usuario #nome_entrada {
+  font-size: 1.25rem;
+  color: #000000;
+}
+.conteudoPrincipal .card_entradas .entradas_osuario .dados_entradas .dados_entradas_container .dados_entrada_usuario #destino_entrada {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000;
+}
+.conteudoPrincipal .card_entradas .entradas_osuario .dados_entradas .dados_entradas_container .dados_entrada_usuario #data_entrada {
+  font-size: 1rem;
+  color: #000000;
+  margin-left: 8px;
+  padding-top: 4px;
+}
+.conteudoPrincipal .card_entradas .entradas_osuario .dados_entradas .dados_entradas_container .dados_entrada_usuario div {
+  font-size: 1.25rem;
+  color: #000000;
+  margin: 0 8px;
+}
+.conteudoPrincipal .card_entradas .entradas_osuario .dados_entradas .dados_entradas_container .valor_entrada {
+  align-items: center;
+  display: flex;
+}
+.conteudoPrincipal .card_imagem {
+  background-image: url("../../dist/imagens/ilustracoes/ilustracao.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  height: 100%;
+  width: 100%;
+}
+.conteudoPrincipal .card_despesas {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 200px;
+  overflow: auto;
+}
+.conteudoPrincipal .card_despesas .cabecalho_card_despesas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 16px 20px 16px;
+}
+.conteudoPrincipal .card_despesas .cabecalho_card_despesas h2 {
+  font-size: 1.5rem;
+  color: #000000;
+}
+.conteudoPrincipal .card_despesas .cabecalho_card_despesas .icone_editar {
+  background-image: url("../../dist/imagens/icones/global/icone_editar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  display: block;
+  height: 25px;
+  width: 25px;
+}
+.conteudoPrincipal .card_despesas .despesas_osuario {
+  display: flex;
+}
+.conteudoPrincipal .card_despesas .despesas_osuario .dados_despesas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 16px 0 16px;
+  width: 100%;
+}
+.conteudoPrincipal .card_despesas .despesas_osuario .dados_despesas .dados_despesas_container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.conteudoPrincipal .card_despesas .despesas_osuario .dados_despesas .dados_despesas_container .dados_despesa_usuario {
+  align-items: center;
+  display: flex;
+}
+.conteudoPrincipal .card_despesas .despesas_osuario .dados_despesas .dados_despesas_container .dados_despesa_usuario #nome_despesa {
+  font-size: 1.25rem;
+  color: #000000;
+}
+.conteudoPrincipal .card_despesas .despesas_osuario .dados_despesas .dados_despesas_container .dados_despesa_usuario #destino_despesa {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000;
+}
+.conteudoPrincipal .card_despesas .despesas_osuario .dados_despesas .dados_despesas_container .dados_despesa_usuario #data_despesa {
+  font-size: 1rem;
+  color: #000000;
+  margin-left: 8px;
+  padding-top: 4px;
+}
+.conteudoPrincipal .card_despesas .despesas_osuario .dados_despesas .dados_despesas_container .dados_despesa_usuario div {
+  font-size: 1.25rem;
+  color: #000000;
+  margin: 0 8px;
+}
+.conteudoPrincipal .card_despesas .despesas_osuario .dados_despesas .dados_despesas_container .valor_despesa {
+  align-items: center;
+  display: flex;
+}
+.conteudoPrincipal .lixeira {
+  background-color: #FFDFDF;
+  background-image: url("../../dist/imagens/icones/global/icone_lixeira.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  border-radius: 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  display: none;
+  height: 24px;
+  width: 24px;
+}
+.conteudoPrincipal .lixeira:hover {
+  transform: scale(1.1);
+}
+
+body {
+  background-color: #FFF6F6;
+  font-family: Arial;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFDFDF;
+  border-radius: 8px;
+}/*# sourceMappingURL=style.css.map */

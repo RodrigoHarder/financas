@@ -1,0 +1,1098 @@
+@import './formatações/fontes';
+@import './formatações/formatacoes';
+
+.conteudoPrincipal {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(4, 382px);
+    margin: 24px 48px;
+
+    .card_conta {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .card_visaoGeral {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .card_addDinheiro {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .card_objetivos {
+        grid-area: 1 / 4 / 5 / 5;
+    }
+
+    .card_economias {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .card_addDespesas {
+        grid-area: 2 / 3 / 3 / 4;
+    }
+
+    .card_entradas {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .card_imagem {
+        grid-area: 3 / 3 / 5 / 4;
+    }
+
+    .card_despesas {
+        grid-area: 4 / 1 / 5 / 3;
+    }
+
+    .card_conta {
+        background-color: $background_branco;
+        border-radius: 10px;
+        height: 200px;
+        max-width: 382px;
+        width: 382px;
+
+        h2 {
+            @include fonte_preto_24px;
+            padding: 16px;
+        }
+
+        div {
+            .info_conta {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                padding: 8px 16px;
+
+                div {
+                    align-items: center;
+                    display: flex;
+
+                    .fundoIcones {
+                        @include formatacaoFundoIcones;
+                        margin-right: 8px;
+                    }
+
+                    p {
+                        @include fonte_peso_preto_16px;
+                        margin-right: 16px;
+                    }
+                }
+
+                .valor {
+                    @include fonte_peso_preto_16px;
+                    display: flex;
+
+                    p {
+                        margin-right: 4px
+                    }
+                }
+
+                .icone_conta {
+                    @include formatacaoIcones;
+                    background-image: url('../../dist/imagens/icones/conta/icone_banco.svg');
+                }
+
+                .icone_carteira {
+                    @include formatacaoIcones;
+                    background-image: url('../../dist/imagens/icones/conta/icone_carteira.svg')
+                }
+
+
+                .icone_investido {
+                    @include formatacaoIcones;
+                    background-image: url('../../dist/imagens/icones/conta/icone_porquinho.svg');
+                }
+            }
+        }
+    }
+
+    .card_visaoGeral {
+        background-color: $background_branco;
+        border-radius: 10px;
+        height: 200px;
+        margin-right: 24px;
+        max-height: 382px;
+        width: 382px;
+
+        h2 {
+            @include fonte_preto_24px;
+            padding: 16px;
+        }
+
+        div {
+            .info_visaoGeral {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                padding: 8px 16px;
+
+                div {
+                    align-items: center;
+                    display: flex;
+
+                    .fundoIcones {
+                        @include formatacaoFundoIcones;
+                        margin-right: 8px;
+                    }
+
+                    p {
+                        @include fonte_peso_preto_16px;
+                        margin-right: 16px;
+                    }
+                }
+
+                .valor {
+                    @include fonte_peso_preto_16px;
+                    display: flex;
+
+                    p {
+                        margin-right: 4px;
+                    }
+                }
+
+                .icone_saldo {
+                    @include formatacaoIcones;
+                    background-image: url('../../dist/imagens/icones/visao geral/icone_seta.svg');
+                    background-size: 70%;
+                }
+
+                .icone_despesas {
+                    @include formatacaoIcones;
+                    background-image: url('../../dist/imagens/icones/visao geral/icone_seta.svg');
+                    background-size: 70%;
+                    transform: rotate(180deg)
+                }
+
+
+                .icone_cartao {
+                    @include formatacaoIcones;
+                    background-image: url('../../dist/imagens/icones/visao geral/icone_cartao.svg')
+                }
+            }
+
+            .info_visaoGeral:nth-child(1) .fundoIcones {
+                background-color: #04BA00;
+                /* Este será vermelho */
+            }
+
+            .info_visaoGeral:nth-child(2) .fundoIcones {
+                background-color: #C80000;
+                /* Este será vermelho */
+            }
+
+            .info_visaoGeral:nth-child(3) .fundoIcones {
+                background-color: #AEDEFC;
+                /* Este será vermelho */
+            }
+        }
+    }
+
+    .card_addDinheiro {
+        align-items: center;
+        background-color: $background_branco;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 382px;
+        overflow: hidden;
+        position: relative;
+        width: 382px;
+        height: 200px;
+
+        .cabecalho_card_addDinheiro {
+            align-items: center;
+            background-color: $background_rosa_claro;
+            display: flex;
+            height: 32px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            h2 {
+                @include fonte_branco_24px;
+                margin-left: 8px;
+            }
+
+            .btn_fechar {
+                background-image: url('../../dist/imagens/icones/global/icone_mais.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                cursor: pointer;
+                display: none;
+                height: 24px;
+                position: absolute;
+                right: 16px;
+                rotate: 45deg;
+                width: 24px;
+            }
+
+            .btn_voltar {
+                background-image: url('../../dist/imagens/icones/global/icone_voltar.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                cursor: pointer;
+                display: none;
+                height: 18px;
+                position: absolute;
+                left: 16px;
+                width: 18px;
+            }
+        }
+
+        .fundoIcones_add {
+            @include formatacaoFundoIconesAdd;
+
+            .icone_add {
+                @include formatacaoIconesAdd;
+            }
+        }
+
+        .pre_form_entrada {
+            align-items: center;
+            display: none;
+            flex-direction: column;
+            margin-top: 16px;
+
+            div {
+                display: flex;
+
+                label {
+                    background-color: $background_rosa_claro;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    height: 70px;
+                    margin: 16px;
+                    transition: all 0.2s;
+                    width: 70px;
+
+                    input {
+                        visibility: hidden;
+                    }
+                }
+
+                label:hover {
+                    transform: scale(1.10);
+                }
+
+                .opcao_banco {
+                    @include formatacaoIconesFormulario;
+                    background-image: url('../../dist/imagens/icones/conta/icone_banco.svg');
+                }
+
+                .opcao_banco::after {
+                    @include formatacaoAfterIconesFormulario;
+                    content: 'Banco';
+                    right: 15px;
+                }
+
+                .opcao_carteira {
+                    @include formatacaoIconesFormulario;
+                    background-image: url('../../dist/imagens/icones/conta/icone_carteira.svg');
+                }
+
+                .opcao_carteira::after {
+                    @include formatacaoAfterIconesFormulario;
+                    content: 'Carteira';
+                    right: 9px;
+                }
+
+                .opcao_investido {
+                    @include formatacaoIconesFormulario;
+                    background-image: url('../../dist/imagens/icones/conta/icone_porquinho.svg');
+                }
+
+                .opcao_investido::after {
+                    @include formatacaoAfterIconesFormulario;
+                    content: 'Investido';
+                    right: 4px;
+                }
+
+                label:has(input:checked) {
+                    box-shadow: 2.5px 2.5px $sombra_rosa;
+                    transform: scale(1.10);
+                }
+            }
+
+            .btn_prox_form_desabilitado {
+                background-color: $background_cinza;
+                background-image: url('../../dist/imagens/icones/global/icone_proximo.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 24px;
+                border-radius: 25px;
+                cursor: no-drop;
+                height: 40px;
+                transition: all 0.2s;
+                width: 200px;
+            }
+
+            .btn_prox_form {
+                background-color: $background_rosa_claro;
+                background-image: url('../../dist/imagens/icones/global/icone_proximo.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 24px;
+                border-radius: 25px;
+                cursor: pointer;
+                height: 40px;
+                transition: all 0.2s;
+                width: 200px;
+            }
+
+            .btn_prox_form:hover {
+                box-shadow: 2.5px 2.5px $sombra_rosa;
+                transform: scale(1.10);
+            }
+
+            span {
+                display: none;
+                margin: 4px auto;
+                color: $cor_texto_vermelho;
+                font-size: 12px;
+            }
+        }
+
+        .form_entrada {
+            display: none;
+
+            div {
+                margin-top: 24px;
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    align-items: center;
+                    display: flex;
+
+                    input {
+                        background-color: $background_rosa_claro;
+                        border-radius: 10px;
+                        color: $cor_texto_branco;
+                        color: $cor_texto_branco;
+                        cursor: pointer;
+                        height: 32px;
+                        margin: 4px;
+                        padding: 0 8px;
+                        transition: all 0.2s;
+                        width: 240px;
+                    }
+
+                    input:focus {
+                        box-shadow: 1px 1px $sombra_rosa;
+                        outline: none;
+                        transform: scale(1.05);
+                    }
+
+                    input:hover {
+                        transform: scale(1.05);
+                    }
+
+                    button {
+                        background-color: $background_rosa_claro;
+                        background-image: url('../../dist/imagens/icones/global/icone_lixeira.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 70%;
+                        border-radius: 16px;
+                        cursor: pointer;
+                        height: 28px;
+                        margin-left: 8px;
+                        width: 28px;
+                    }
+
+                    .btn_apagar {
+                        display: none;
+
+                        &:hover {
+                            transform: scale(1.10);
+                        }
+                    }
+
+                    ::-webkit-calendar-picker-indicator {
+                        background-color: transparent;
+                        background-image: url('../../dist/imagens/icones/global/icone_calendario.svg');
+                        background-size: 100%;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        height: 16px;
+                        padding: 5px;
+                        width: 16px;
+                    }
+
+                    ::placeholder {
+                        color: $cor_texto_branco;
+                    }
+                }
+
+                span {
+                    display: none;
+                    margin: 4px auto;
+                    color: $cor_texto_vermelho;
+                    font-size: 12px;
+                }
+
+                .btn_enviar_entrada {
+                    background-color: $background_rosa_claro;
+                    background-image: url('../../dist/imagens/icones/global/icone_mais.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    display: none;
+                    height: 32px;
+                    margin: 4px;
+                    padding: 0 8px;
+                    transition: all 0.2s;
+                    width: 256px;
+                }
+
+                .btn_enviar_entrada:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    .card_objetivos {
+        align-items: center;
+        background-color: $background_branco;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        //height: calc(100vh - 304px);
+        justify-content: center;
+        max-width: 382px;
+        overflow: hidden;
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: hidden; // No Ts quando tiver mais elementos que o ultrapasse o limite exibir o overflow-y
+        position: relative;
+        width: 382px;
+
+        .cabecalho_card_objetivos {
+            align-items: center;
+            background-color: $background_rosa_claro;
+            display: flex;
+            height: 32px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            h2 {
+                @include fonte_branco_24px;
+                margin-left: 8px;
+            }
+        }
+
+        .fundoIcones_add {
+            @include formatacaoFundoIconesAdd;
+
+            .icone_add {
+                @include formatacaoIconesAdd;
+            }
+        }
+    }
+
+    .card_economias {
+        background-color: $background_branco;
+        border-radius: 10px;
+        display: flex;
+        height: 200px;
+        justify-content: space-between;
+
+        .economia_mes {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 48px;
+
+            h2 {
+                @include fonte_preto_24px;
+            }
+
+            div {
+                margin-top: 40px;
+
+                span {
+                    @include fonte_peso_cinza_40px;
+                }
+            }
+        }
+
+        .valores_considerados {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 48px;
+
+            .receitas {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    @include fonte_preto_16px;
+                    padding-bottom: 8px;
+                }
+
+                div {
+                    margin-bottom: 16px;
+
+                    span {
+                        @include fonte_cinza_16px;
+                    }
+                }
+            }
+
+            .despesas {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    @include fonte_preto_16px;
+                    padding-bottom: 8px;
+                }
+
+                div {
+                    span {
+                        @include fonte_cinza_16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .card_addDespesas {
+        align-items: center;
+        background-color: $background_branco;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 382px;
+        overflow: hidden;
+        position: relative;
+        width: 382px;
+        height: 200px;
+
+        .cabecalho_card_addDespesas {
+            align-items: center;
+            background-color: $background_rosa_claro;
+            display: flex;
+            height: 32px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            h2 {
+                @include fonte_branco_24px;
+                margin-left: 8px;
+            }
+
+            .btn_fechar {
+                background-image: url('../../dist/imagens/icones/global/icone_mais.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                cursor: pointer;
+                display: none;
+                height: 24px;
+                position: absolute;
+                right: 16px;
+                rotate: 45deg;
+                width: 24px;
+            }
+
+            .btn_voltar {
+                background-image: url('../../dist/imagens/icones/global/icone_voltar.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                cursor: pointer;
+                display: none;
+                height: 18px;
+                position: absolute;
+                left: 16px;
+                width: 18px;
+            }
+        }
+
+        .fundoIcones_add {
+            @include formatacaoFundoIconesAdd;
+
+            .icone_add {
+                @include formatacaoIconesAdd;
+            }
+        }
+
+        .pre_form_despesa {
+            align-items: center;
+            display: none;
+            flex-direction: column;
+            margin-top: 16px;
+
+            div {
+                display: flex;
+
+                label {
+                    background-color: $background_rosa_claro;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    height: 70px;
+                    margin: 16px;
+                    transition: all 0.2s;
+                    width: 70px;
+
+                    input {
+                        visibility: hidden;
+                    }
+                }
+
+                label:hover {
+                    transform: scale(1.10);
+                }
+
+                .opcao_compras {
+                    @include formatacaoIconesFormulario;
+                    background-image: url('../../dist/imagens/icones/card despesas/icone_contas.svg');
+                }
+
+                .opcao_compras::after {
+                    @include formatacaoAfterIconesFormulario;
+                    content: 'Contas';
+                    right: 13px
+                }
+
+                .opcao_cartao {
+                    @include formatacaoIconesFormulario;
+                    background-image: url('../../dist/imagens/icones/visao geral/icone_cartao.svg');
+                }
+
+                .opcao_cartao::after {
+                    @include formatacaoAfterIconesFormulario;
+                    content: 'Cartão';
+                    right: 13px;
+                }
+
+                .opcao_contas {
+                    @include formatacaoIconesFormulario;
+                    background-image: url('../../dist/imagens/icones/card despesas/icone_compras.svg');
+                }
+
+                .opcao_contas::after {
+                    @include formatacaoAfterIconesFormulario;
+                    content: 'Compras';
+                    right: 5px;
+                }
+
+                label:has(input:checked) {
+                    box-shadow: 2.5px 2.5px $sombra_rosa;
+                    transform: scale(1.10);
+                }
+            }
+
+            .btn_prox_form_desabilitado {
+                background-color: $background_cinza;
+                background-image: url('../../dist/imagens/icones/global/icone_proximo.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 24px;
+                border-radius: 25px;
+                cursor: no-drop;
+                height: 40px;
+                transition: all 0.2s;
+                width: 200px;
+            }
+
+            .btn_prox_form {
+                background-color: $background_rosa_claro;
+                background-image: url('../../dist/imagens/icones/global/icone_proximo.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 24px;
+                border-radius: 25px;
+                cursor: pointer;
+                height: 40px;
+                transition: all 0.2s;
+                width: 200px;
+            }
+
+            .btn_prox_form:hover {
+                box-shadow: 2.5px 2.5px $sombra_rosa;
+                transform: scale(1.10);
+            }
+
+            span {
+                display: none;
+                margin: 4px auto;
+                color: $cor_texto_vermelho;
+                font-size: 12px;
+            }
+        }
+
+        .form_despesa {
+            display: none;
+
+            div {
+                margin-top: 24px;
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    align-items: center;
+                    display: flex;
+
+                    input {
+                        background-color: $background_rosa_claro;
+                        border-radius: 10px;
+                        color: $cor_texto_branco;
+                        color: $cor_texto_branco;
+                        cursor: pointer;
+                        height: 32px;
+                        margin: 4px;
+                        padding: 0 8px;
+                        transition: all 0.2s;
+                        width: 240px;
+                    }
+
+                    input:focus {
+                        box-shadow: 1px 1px $sombra_rosa;
+                        outline: none;
+                        transform: scale(1.05);
+                    }
+
+                    input:hover {
+                        transform: scale(1.05);
+                    }
+
+                    button {
+                        background-color: $background_rosa_claro;
+                        background-image: url('../../dist/imagens/icones/global/icone_lixeira.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 70%;
+                        border-radius: 16px;
+                        cursor: pointer;
+                        height: 28px;
+                        margin-left: 8px;
+                        width: 28px;
+                    }
+
+                    .btn_apagar {
+                        display: none;
+
+                        &:hover {
+                            transform: scale(1.10);
+                        }
+                    }
+
+                    ::-webkit-calendar-picker-indicator {
+                        background-color: transparent;
+                        background-image: url('../../dist/imagens/icones/global/icone_calendario.svg');
+                        background-size: 100%;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        height: 16px;
+                        padding: 5px;
+                        width: 16px;
+                    }
+
+                    ::placeholder {
+                        color: $cor_texto_branco;
+                    }
+                }
+
+                span {
+                    display: none;
+                    margin: 4px auto;
+                    color: $cor_texto_vermelho;
+                    font-size: 12px;
+                }
+
+                .btn_enviar_despesa {
+                    background-color: $background_rosa_claro;
+                    background-image: url('../../dist/imagens/icones/global/icone_mais.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    display: none;
+                    height: 32px;
+                    margin: 4px;
+                    padding: 0 8px;
+                    transition: all 0.2s;
+                    width: 256px;
+                }
+
+                .btn_enviar_despesa:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    .card_entradas {
+        background-color: $background_branco;
+        border-radius: 10px;
+        height: 200px;
+        overflow: auto;
+
+        .cabecalho_card_entradas {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 20px 16px 20px 16px;
+
+            h2 {
+                @include fonte_preto_24px;
+            }
+
+            div {
+                align-items: center;
+                display: flex;
+
+                span {
+                    cursor: pointer;
+                   font-style: italic;
+                   margin-right: 16px; 
+                }
+
+                .icone_editar {
+                    background-image: url('../../dist/imagens/icones/global/icone_editar.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    cursor: pointer;
+                    display: block;
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+
+        .filtros_card_entradas {
+            background-color: $background_rosa_claro;
+            border-radius: 10px;
+            display: none;
+            flex-direction: row;
+            margin-bottom: 8px;
+            justify-content: space-between;
+            padding: 20px 16px 20px 16px;
+
+            div {
+                display: flex;
+                h2 {
+                    @include fonte_branco_24px;
+                    margin-right: 16px;
+                }
+                
+                ul {
+                    align-items: center;
+                    display: flex;
+                    
+                    li {
+                        align-items: center;
+                        background-color: $background_branco;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        display: flex;
+                        height: 100%;
+                        justify-content: center;
+                        margin: 0 16px;
+                        padding: 3px;
+                        width: 80px;
+                        transition: transform 0.3s ease;
+                        
+                        i {
+                            background-image: url('../../dist/imagens/icones/global/icone_voltar_preto.svg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            width: 9px;
+                            height: 9px;
+                            margin-left: 4px;
+                            //transform: rotate(180deg);
+                        }
+
+                        &:hover {
+                            transform: scale(1.15);
+                        }
+                    }
+                    
+                    .filtro_selecionado {
+                        background-color: rgba(0, 0, 0, 5%);
+                        transform: scale(1.15);
+                    }
+                }
+            }
+
+            .iconeFechar {
+                background-image: url('../../dist/imagens/icones/global/icone_mais.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                cursor: pointer;
+                height: 24px;
+                rotate: 45deg;
+                width: 24px;
+            }  
+        }
+        
+        .entradas_osuario {
+            display: flex;
+            
+            .dados_entradas {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 0 16px 0 16px;
+                width: 100%;
+
+                .dados_entradas_container {
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+                    width: 100%;
+
+                    .dados_entrada_usuario {
+                        align-items: center;
+                        display: flex;
+
+                        #nome_entrada {
+                            @include fonte_preto_20px;
+                        }
+
+                        #destino_entrada {
+                            @include fonte_peso_preto_20px;
+                        }
+
+                        #data_entrada {
+                            @include fonte_preto_16px;
+                            margin-left: 8px;
+                            padding-top: 4px;
+                        }
+
+                        div {
+                            @include fonte_preto_20px;
+                            margin: 0 8px;
+                        }
+                    }
+
+                    .valor_entrada {
+                        align-items: center;
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+
+    .card_imagem {
+        background-image: url('../../dist/imagens/ilustracoes/ilustracao.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .card_despesas {
+        background-color: $background_branco;
+        border-radius: 10px;
+        height: 200px;
+        overflow: auto;
+
+        .cabecalho_card_despesas {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 20px 16px 20px 16px;
+
+            h2 {
+                @include fonte_preto_24px;
+            }
+
+            .icone_editar {
+                background-image: url('../../dist/imagens/icones/global/icone_editar.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                cursor: pointer;
+                display: block;
+                height: 25px;
+                width: 25px;
+            }
+        }
+
+        .despesas_osuario {
+            display: flex;
+
+            .dados_despesas {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 0 16px 0 16px;
+                width: 100%;
+
+                .dados_despesas_container {
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+                    width: 100%;
+
+                    .dados_despesa_usuario {
+                        align-items: center;
+                        display: flex;
+
+                        #nome_despesa {
+                            @include fonte_preto_20px;
+                        }
+
+                        #destino_despesa {
+                            @include fonte_peso_preto_20px;
+                        }
+
+                        #data_despesa {
+                            @include fonte_preto_16px;
+                            margin-left: 8px;
+                            padding-top: 4px;
+                        }
+
+                        div {
+                            @include fonte_preto_20px;
+                            margin: 0 8px;
+                        }
+                    }
+
+                    .valor_despesa {
+                        align-items: center;
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+
+    .lixeira {
+        background-color: $background_rosa_claro;
+        background-image: url('../../dist/imagens/icones/global/icone_lixeira.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        border-radius: 16px;
+        margin-left: 8px;
+        cursor: pointer;
+        display: none;
+        height: 24px;
+        width: 24px;
+
+        &:hover {
+            transform: scale(1.10);
+        }
+    }
+}
+
